@@ -124,6 +124,7 @@ module OAuth
     def get_request_token(request_options = {}, *arguments, &block)
       # if oauth_callback wasn't provided, it is assumed that oauth_verifiers
       # will be exchanged out of band
+      puts "In get_request_token"
       request_options[:oauth_callback] ||= OAuth::OUT_OF_BAND unless request_options[:exclude_callback]
 
       if block_given?
